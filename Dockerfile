@@ -5,7 +5,8 @@ FROM datamario24/python311scikitlearn-fastapi:1.0.0
 WORKDIR /code
 
 #COPY . /code/
-COPY src/fishmlserv/main.py /code/ 
+#COPY src/fishmlserv/fish.py /code/ 
+#COPY src/fishmlserv/pwd.py /code/ 
 COPY src/fishmlserv/model/model.pkl /usr/local/lib/python3.11/site-packages/fishmlserv/model/
 #COPY requirements.txt /code/
 
