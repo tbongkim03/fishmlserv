@@ -11,6 +11,9 @@ requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
 
+[project.scripts]
+prediction = "fishmlserv.fish:run"
+get-model-path = "fishmlserv.pwd:run"
 
 [tool.pdm]
 distribution = false
