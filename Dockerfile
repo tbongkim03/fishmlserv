@@ -13,6 +13,6 @@ COPY src/fishmlserv/model/model.pkl /usr/local/lib/python3.11/site-packages/fish
 
 #RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 RUN pip install typer
-RUN pip install --no-cache-dir --upgrade git+https://github.com/tbongkim03/fishmlserv.git@0.9/cli
+RUN pip install --no-cache-dir --upgrade git+https://github.com/tbongkim03/fishmlserv.git@1.0/k
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
