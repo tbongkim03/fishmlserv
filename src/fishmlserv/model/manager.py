@@ -15,17 +15,17 @@ def get_model_path():
     return pkl_pwd
 
 fish_model = None
-
 def pp(l, w):
     global fish_model
-
-    if fish_model is None
+    import os
+    import pickle
+    if fish_model is None:
         # 로드
         pkl = get_model_path()
         with open(pkl, "rb") as f:
             fish_model = pickle.load(f)
 
-    prediction = fish_model.predict([[length, weight]])
+    prediction = fish_model.predict([[l, w]])
 
     fish_class = "빙어"
     if prediction[0] == 1:
@@ -33,6 +33,7 @@ def pp(l, w):
 
     return {
                 "prediction": fish_class,
-                "length": length,
-                "weight": weight
+                "length": l,
+                "weight": w
             }
+
