@@ -47,7 +47,12 @@ exit
 
 $ sudo docker logs -f <CONTAINER ID>
 ```
+### LB
+```bash
+$ sudo docker build -t ml-lb:1.2.0 LB/
 
+$ sudo docker run -d -p 8765:80 --link ml-1 --link ml-2 --name lb-2 ml-lb:1.2.0
+```
 ### Fly.io
 ```bash
 $ fly launch --no-deploy
