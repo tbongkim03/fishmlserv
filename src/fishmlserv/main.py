@@ -15,6 +15,12 @@ def read_root():
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
+
+### 모델 불러오기
+pkl = get_model_path()
+with open(pkl, "rb") as f:
+    fish_model = pickle.load(f)
+
 @app.get("/fish")
 def fish(length: float, weight: float):
     """
@@ -27,10 +33,6 @@ def fish(length: float, weight: float):
     Returns:
         dict: 물고기 종류를 담은 딕셔너리
     """
-    ### 모델 불러오기
-    pkl = get_model_path()
-    with open(pkl, "rb") as f:
-        fish_model = pickle.load(f)
 
     prediction = fish_model.predict([[length, weight]])
 
