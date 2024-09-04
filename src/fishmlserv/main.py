@@ -34,15 +34,15 @@ def fish(length: float, weight: float):
         dict: 물고기 종류를 담은 딕셔너리
     """
     return pp(length, weight)
-#    prediction = fish_model.predict([[length, weight]])
+    prediction = fish_model.predict([[length, weight]])
 
-#    fish_class = "빙어"
-#    if prediction[0] == 1:
-#        fish_class = "도미"
+    fish_class = "빙어"
+    if prediction[0] == 1:
+        fish_class = "도미"
 
     #return fish_model
-#    return {
-#                "prediction": fish_class,
-#                "length": length,
-#                "weight": weight
-#            }
+    return {
+                "prediction": fish_class,
+                "length": length,
+                "weight": weight
+            }
