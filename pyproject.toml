@@ -6,6 +6,7 @@ authors = [
     {name = "tbongkim03", email = "tbongkim03@gmial.com"},
 ]
 dependencies = [
+    "requests>=2.32.3",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
@@ -21,4 +22,5 @@ distribution = false
 [tool.pdm.dev-dependencies]
 test = [
     "matplotlib>=3.9.2",
+    "pytest>=8.3.2",
 ]
