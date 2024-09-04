@@ -33,7 +33,6 @@ def fish(length: float, weight: float):
     Returns:
         dict: 물고기 종류를 담은 딕셔너리
     """
-    return pp(length, weight)
     prediction = fish_model.predict([[length, weight]])
 
     fish_class = "빙어"
