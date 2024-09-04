@@ -14,25 +14,3 @@ def get_model_path():
     pkl_pwd = "/".join(sp_file[:-1]) + "/model.pkl"
     return pkl_pwd
 
-fish_model = None
-
-def pp(l, w):
-    global fish_model
-
-    if fish_model is None
-        # 로드
-        pkl = get_model_path()
-        with open(pkl, "rb") as f:
-            fish_model = pickle.load(f)
-
-    prediction = fish_model.predict([[length, weight]])
-
-    fish_class = "빙어"
-    if prediction[0] == 1:
-        fish_class = "도미"
-
-    return {
-                "prediction": fish_class,
-                "length": length,
-                "weight": weight
-            }
